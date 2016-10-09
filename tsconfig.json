@@ -1,0 +1,20 @@
+{
+  "version": "1.8.2",
+
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5",
+    "allowJs": true
+  },
+
+  "files": [
+    "src/main.ts",
+    "typings/index.d.ts",
+    "src/components/app/app.component.ts"
+  ]
+}

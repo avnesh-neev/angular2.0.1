@@ -1,0 +1,22 @@
+{
+  "x": {
+    "apiary": {
+      "baseUrl": "https://private-xyz.apiary-mock.com/test/",
+      "requiresAuthentication": false
+    },
+    "local": {
+      "baseUrl": "http://localhost:8080/test/",
+      "requiresAuthentication": false
+    }
+  },
+  "y": {
+     "apiary": {
+      "baseUrl": "https://private-xyz.apiary-mock.com/test1/",
+      "requiresAuthentication": false
+    },
+    "local": {
+      "baseUrl": "http://localhost:8080/test1/",
+      "requiresAuthentication": false
+    }
+  }
+}

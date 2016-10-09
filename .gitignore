@@ -1,0 +1,56 @@
+#---------------------------------
+# Directories
+#---------------------------------
+**/node_modules/
+target/
+tmp/
+typings/
+
+
+#---------------------------------
+# Extensions
+#---------------------------------
+*.gz
+*.log
+*.rar
+*.tar
+*.zip
+
+
+#---------------------------------
+# IDE generated
+#---------------------------------
+.idea/
+.project
+*.iml
+
+
+#---------------------------------
+# OS generated
+#---------------------------------
+__MACOSX/
+.DS_Store
+Thumbs.db
+/docs
+/HTML-files/css/app.css.map
+/HTML-files/css/app.css.map
+/HTML-files/css/bootstrap.css.map
+/HTML-files/css/.sass-cache
+/HTML-files/css/*.map
+/HTML-files/bootstrap/.sass-cache
+
+src/**/*.js
+src/**/*.js.map
+
+src/**/*.css
+src/**/*.css.map
+/src/styles/.sass-cache
+
+!src/vendor/**/*.js
+!src/vendor/**/*.css
+
+#-----------------------------------------
+# Sublime configuration for Application
+#-----------------------------------------
+ETL.sublime-project
+ETL.sublime-workspace
