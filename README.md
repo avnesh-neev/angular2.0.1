@@ -25,7 +25,7 @@
 ### Installing Global Dependencies
 ##### Gulp v4 (optional)
 ```shell
-$ npm install -g gulpjs/gulp-cli#4.0
+$ npm install gulpjs/gulp-cli -g
 ```
 The gulp tasks for this project require gulp v4-alpha. If you don't wish to globally install the v4 gulp-cli, you can run the gulp tasks using the locally installed gulp under `./node_modules/.bin` — for example:
 ```shell
