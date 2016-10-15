@@ -1,0 +1,49 @@
+<section class="users">
+    <div>
+        <p class="heading">users</p>
+    </div>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr class="">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Homepage</th>
+                    <th>Owner's Login</th>
+                    <th>Owner's Type</th>
+                    <th>Updated At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let repo of usersRepo; let i=index;">
+                    <td>{{repo.id}}</td>
+                    <td>{{repo.name}}</td>
+                    <td class="home-page">{{repo.homepage}}</td>
+                    <td>{{repo.owner.login}}</td>
+                    <td>{{repo.owner.type}}</td>
+                    <td>{{repo.updated_at | date:'MM/dd/yyyy h:mm a'}}</td>
+                    <td (click)="showDetail(viewModal, repo)">
+                        view
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<modal #viewModal 
+        id="viewRule" 
+        [show-modal]="isModalOpen" 
+        [title]="'User detail'"
+        >
+    <div class="popup-content">
+        <p>Hey! <b>{{selectedRepo.name}}</b></p>
+        <p><b>Last updated:</b> {{selectedRepo.updated_at | date:'MM/dd/yyyy h:mm a'}}</p>
+    </div>
+    <div class="popup-footer">
+        <button type="button" class="btn btn-primary" (click)="viewModal.hide()" aria-label="Close">
+            OK
+        </button>
+    </div>
+</modal>

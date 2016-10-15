@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FileUploadModule } from 'ng2-file-upload';
@@ -12,6 +12,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from '../header/header.component';
 import { HomeComponent } from '../home/home.component';
 import { FooterComponent } from '../footer/footer.component';
+import { UsersComponent } from '../users/users.component';
+import { ConferencesComponent } from '../conferences/conferences.component';
+import { JsConferenceComponent } from '../jsConference/jsConference.component';
+import { JavaConferenceComponent } from '../javaConference/javaConference.component';
+import { RubyConferenceComponent } from '../rubyConference/rubyConference.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { CapitalizePipe } from '../customPipes/capitalize.pipe';
+import { ContactUsComponent } from '../contactUs/contactUs.component';
+import { HighlightDirective } from '../customDirectives/myHighlight.directive';
+import { UnlessDirective } from '../customDirectives/myUnless.directive';
 
 
 import '../../styles/blue.scss';
@@ -27,13 +37,25 @@ import '../../styles/blue.scss';
         ProgressbarModule,
         routing,
         ModalModule,
-        FileUploadModule
+        FileUploadModule,
+        ReactiveFormsModule
     ],
     declarations: [
         AppComponent,
         HeaderComponent,
         HomeComponent,
-        FooterComponent
+        FooterComponent,
+        UsersComponent,
+        ConferencesComponent,
+        JsConferenceComponent,
+        JavaConferenceComponent,
+        RubyConferenceComponent,
+        DashboardComponent,
+        CapitalizePipe,
+        ContactUsComponent,
+        HighlightDirective,
+        UnlessDirective
+
     ],
     bootstrap: [ AppComponent ],
     providers: [
@@ -41,6 +63,7 @@ import '../../styles/blue.scss';
         { provide: LocationStrategy, useClass: HashLocationStrategy }
     ]
 })
+
 export class AppModule {
 }
 

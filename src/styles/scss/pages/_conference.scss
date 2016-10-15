@@ -1,0 +1,43 @@
+.conference{
+    box-shadow: 2px 0 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    margin: 1.667rem;
+    font-family:open sans; 
+    padding:4rem 2rem 2rem 2rem;
+    min-height: 30rem;
+    text-align: center;
+    .conference-tag {
+        color:#fff;
+        background: #31B0D6;
+        border:1px solid #31B0D6;
+        padding:1rem 4rem;
+        margin-right: 1rem;
+        border-radius: 0.3rem;
+        &:hover {
+            text-decoration: none;
+        }
+        &:checked {
+            text-decoration: none;
+        }
+    }
+    .conference-tag:checked{
+        text-decoration: none;
+    }
+    p{
+        font-size: 1.1rem;
+    }
+}
+.conference-style-1{
+    text-align: center;
+    color: #f32238;
+    margin-top: 2rem;
+}
+.conference-style-2{
+    text-align: center;
+    color: #ec971f;
+    margin-top: 2rem;
+}
+.conference-style-3{
+    text-align: center;
+    color: #c00;
+    margin-top: 2rem;
+}

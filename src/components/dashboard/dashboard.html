@@ -1,0 +1,29 @@
+<section class="dashboard">
+    <div>
+        <select [(ngModel)]="selectedOption">
+            <option *ngFor="let option of selectOptions" value="{{option}}">
+                {{option}}
+            </option>
+        </select>
+    </div>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Attended conferences</th>
+                </tr> 
+            </thead>
+          
+                <template ngFor let-user [ngForOf]="attendeeList ">
+                    <tr *ngIf="selectedOption===user.isAttended ||selectedOption=== 'All' " class="dashboard-tr">
+                        <td  myHighlight>{{user.name | capitalize}}</td>
+                        <td>{{user.designation}}</td>
+                        <td>{{user.noOfConfAttended}}</td>
+                    </tr> 
+                </template>
+          
+        </table>
+    </div> 
+</section>

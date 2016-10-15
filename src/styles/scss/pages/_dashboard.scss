@@ -1,0 +1,33 @@
+.dashboard{
+    select{
+        width:15rem;
+        margin-bottom:1.3rem;
+        border-radius: 0.2rem;
+        padding:0.3rem;
+    }
+    margin: 1.667rem;
+    font-family:open sans;
+    table{
+        .dashboard-tr{
+            background: #fff;
+            cursor: pointer;
+            &:nth-child(even) {
+                background: rgba(204, 204, 204, 0.12);
+            }
+            &:hover {
+                background: rgba(57, 123, 171, 0.16);
+                opacity: 10%;
+            }
+            td{
+                padding: .6rem 1rem;
+                color: #727272;
+                &.home-page{
+                    max-width: 2.5rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

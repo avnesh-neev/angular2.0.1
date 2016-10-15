@@ -1,0 +1,53 @@
+<!-- Template-Driven Forms -->
+<!-- <section class="sample-app-content">
+<h1>Template-driven Form Example:</h1>
+<form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()">
+<p>
+<label>First Name:</label>
+<input type="text" name="firstName" required [(ngModel)]="user.firstName">
+</p>
+<p>
+<label>Last Name:</label>
+<input type="password" name="lastName" required [(ngModel)]="user.lastName">
+</p>
+<p>
+<label>Email:</label>
+<input type="password" name="lastName" required [(ngModel)]="user.email">
+</p>
+<p>
+<button type="submit" [disabled]="!f.valid">Submit</button>
+</p>
+</form>
+</section> -->
+
+
+<section class="sample-app-content contact-us"> 
+        <p class="heading">Model-based Form Example</p>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <p>
+                <label>Name:</label>
+                <input type="text" id="name" name="name" formControlName="name">
+                <!-- <div [hidden]="form.value.name" class="alert alert-danger">
+name is required
+</div> -->
+            </p>
+            <p>
+                <label>Mobile:</label>
+                <input type="text" id="mobile" name="mobile" formControlName="mobile">
+                <!-- <div [hidden]="form.value.mobile" class="alert alert-danger">
+mobile is required
+</div> -->
+            </p>
+            <p>
+                <label>Message:</label>
+                <input type="text" id="message" name="message" formControlName="message">
+                <!-- <div [hidden]="form.value.message" class="alert alert-danger">
+message is required
+</div> -->
+            </p>
+            <p>
+                <label></label>
+                <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+            </p>
+        </form>
+</section>
